@@ -1,26 +1,33 @@
-# Project Name
+# Learn ReactJs with me 😇
 
-> ReactUno
+> This repo is for simple reactjs practices
 
 ## Description
 
-> This is a simple React Course followed from Programming with Mosh
+> Everything that is there is for learning about React in 2023.
 
-## Learning Objectives 
+## Topics to be covered 
 
-- Master React Fundamentals
-- Build Reusable Components
-- Render Data
-- Handle Events
-- Debug React Apps
+- CLI Tools
+- Components
+- Rendering
+- Hooks
+- Routers
+- State Management
+- Styling
+- API Calls
+- Testing
+- Frameworks
+- Forms
+- Mobile
 
 ## Built With
 
 - React
 
-## Live Demo (if available)
+## Roadmap link 
 
-[Live Demo Link](https://livedemo.com)
+[Link](https://roadmap.sh/react)
 
 
 
@@ -28,7 +35,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/ChrispaixK/react/issues).
 
 ## Show your support
 
@@ -36,6 +43,6 @@ Give a ⭐️ if you like this course content!
 
 ## Acknowledgments
 
-- Programming with Mosh
 - MicroverseInc
+- roadmap.sh
 
