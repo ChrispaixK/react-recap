@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Welcome = (props) => (
+const Welcome = () => (
   <div>
     <div>
       <h2>
         Welcome to react recap
-        {props}
       </h2>
     </div>
 
