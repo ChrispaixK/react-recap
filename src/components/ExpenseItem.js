@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import './ExpenseItem.css';
+import ExpenseDate from './ExpenseDate';
 
 const ExpenseItem = (props) => {
   const {
@@ -9,7 +10,7 @@ const ExpenseItem = (props) => {
 
   return (
     <div id={id} className="expense-item">
-      <div>{date.toDateString()}</div>
+      <ExpenseDate date={date} />
       <div className="expense-item_description">
         <h2>{title}</h2>
         <div className="expense-item_price">{amount}</div>
@@ -22,7 +23,7 @@ ExpenseItem.propTypes = {
   id: propTypes.string.isRequired,
   title: propTypes.string.isRequired,
   amount: propTypes.number.isRequired,
-  date: propTypes.string.isRequired,
+  date: propTypes.instanceOf(Date).isRequired,
 };
 
 export default ExpenseItem;
