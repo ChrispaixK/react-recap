@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Expenses from './components/Expenses';
+import './components/Expenses.css';
 
 function App() {
   const expenses = [
