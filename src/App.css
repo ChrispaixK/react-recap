@@ -1,3 +1,7 @@
 body {
   background-color: #e5cfff;
 }
+
+.text-centered {
+  text-align: center;
+}
