@@ -1,14 +1,7 @@
 import React from 'react';
 
 const Welcome = () => (
-  <div>
-    <div>
-      <h2>
-        Welcome to react recap
-      </h2>
-    </div>
-
-  </div>
+  <h2>React recap</h2>
 );
 
 export default Welcome;
