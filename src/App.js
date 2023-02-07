@@ -1,10 +1,12 @@
-import Welcome from './components/welcome';
+import ExpenseItem from './components/ExpenseItem';
 import './App.css';
+import Header from './components/Header';
 
 function App() {
   return (
     <div>
-      <Welcome />
+      <Header />
+      <ExpenseItem />
     </div>
   );
 }
