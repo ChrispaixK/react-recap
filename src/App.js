@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/UI/Header';
 import Expenses from './components/Expenses/Expenses';
 import './components/Expenses/Expenses.css';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
   const expenses = [
@@ -35,6 +36,7 @@ function App() {
   return (
     <div>
       <Header />
+      <NewExpense />
       <div className="expenses">
         <Expenses expensesList={expenses} />
       </div>

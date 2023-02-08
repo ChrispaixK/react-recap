@@ -1,5 +1,5 @@
-import React from 'react';
-import propTypes from 'prop-types';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
@@ -9,22 +9,29 @@ const ExpenseItem = (props) => {
     id, title, amount, date,
   } = props;
 
+  const [actualTitle, changeTitle] = useState(title);
+
+  const clickHandler = () => {
+    const i = prompt();
+    changeTitle(i);
+  };
   return (
     <Card id={id} className="expense-item">
       <ExpenseDate date={date} />
       <div className="expense-item_description">
-        <h2>{title}</h2>
+        <h2>{actualTitle}</h2>
         <div className="expense-item_price">{amount}</div>
+        <button onClick={clickHandler} type="button">change title</button>
       </div>
     </Card>
   );
 };
 
 ExpenseItem.propTypes = {
-  id: propTypes.string.isRequired,
-  title: propTypes.string.isRequired,
-  amount: propTypes.number.isRequired,
-  date: propTypes.instanceOf(Date).isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  amount: PropTypes.number.isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
 };
 
 export default ExpenseItem;
