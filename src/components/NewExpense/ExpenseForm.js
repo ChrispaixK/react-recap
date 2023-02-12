@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
@@ -18,13 +19,14 @@ const ExpenseForm = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    const expensesDate = {
+    const { onSaveExpenseData } = props;
+    const expenseData = {
       title: enteredTitle,
       amout: enteredAmount,
       date: new Date(enteredDate),
     };
 
-    console.log(expensesDate);
+    onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
@@ -75,6 +77,10 @@ const ExpenseForm = () => {
       ;
     </div>
   );
+};
+
+ExpenseForm.propTypes = {
+  onSaveExpenseData: PropTypes.string.isRequired,
 };
 
 export default ExpenseForm;
