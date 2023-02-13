@@ -2,8 +2,9 @@
 //  and destructured props assignement
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import ExpenseItem from './ExpenseItem';
 import ExpensesFilter from './ExpenseFilter';
+import ExpensesList from './ExpensesList';
+import ExpensesChart from './ExpensesChart';
 
 const Expenses = (props) => {
   const { expensesList } = props;
@@ -13,22 +14,21 @@ const Expenses = (props) => {
     setFilteredYear(selectedYear);
   };
 
+  const filteredExpenses = expensesList.filter(
+    (exp) => exp.date.getFullYear().toString() === filteredYear,
+  );
+
   return (
     <div>
       <div>
-        <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+        <ExpensesFilter
+          selected={filteredYear}
+          onChangeFilter={filterChangeHandler}
+        />
       </div>
+      <ExpensesChart expenses={filteredExpenses} />
       <div>
-        {expensesList.map((exp) => (
-          <div key={exp.id}>
-            <ExpenseItem
-              id={exp.id}
-              title={exp.title}
-              amount={exp.amount}
-              date={exp.date}
-            />
-          </div>
-        ))}
+        <ExpensesList expenses={filteredExpenses} />
       </div>
     </div>
   );

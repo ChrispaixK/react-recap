@@ -20,7 +20,10 @@ const ExpenseItem = (props) => {
       <ExpenseDate date={date} />
       <div className="expense-item_description">
         <h2>{actualTitle}</h2>
-        <div className="expense-item_price">{amount}</div>
+        <div className="expense-item_price">
+          $
+          {amount}
+        </div>
         <button onClick={clickHandler} type="button">change title</button>
       </div>
     </Card>
@@ -30,7 +33,7 @@ const ExpenseItem = (props) => {
 ExpenseItem.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  amount: PropTypes.number.isRequired,
+  amount: PropTypes.string.isRequired,
   date: PropTypes.instanceOf(Date).isRequired,
 };
 
